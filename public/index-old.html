@@ -1,0 +1,115 @@
+<html>
+
+<head>
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <title>Table Crawl</title>
+
+    <style>
+        body {
+            background-color: rgb(56, 28, 30);
+            background-image: url('img/dad.svg');
+            background-position: top center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 0;
+        }
+
+        .header {
+            width: 100vw;
+            height: 10vh;
+            background-color: #766F57;
+            transform: translateY(-5vh);
+            box-shadow: 0px -4px 20px 0px #000000;
+        }
+
+        .buttons {
+            margin: 0 20vw 0 20vw;
+            width: 60vw;
+            transform: translateY(5vh);
+        }
+
+        .button {
+            display: inline-block;
+            width: 15%;
+            height: 5vh;
+            text-align: center;
+        }
+
+        .die-svg {
+            transition: transform 1s;
+            fill: rgb(56, 28, 30);
+            height: 5vh;
+        }
+
+        .die-svg:hover {
+            transform: rotate(60deg);
+            cursor: pointer;
+            fill: rgb(255, 124, 134);
+        }
+
+        .die-svg:hover > .header {
+            transform: translateY(-4vh);
+            transition: transform 0.5s;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="buttons">
+            <div class="button1 button">
+                <svg class="die-svg" viewBox="0 0 100 100" version="1.1" x="0px" y="0px"><g transform="translate(0,-952.36216)"><path d="m 49.999999,957.36216 -38.971335,22.4997 0,45.00064 1.290604,0.7457 37.680731,21.754 38.971337,-22.4997 0,-45.00064 -38.971337,-22.4997 z m 0,7.5949 15.565861,23.0246 -31.131722,0 15.565861,-23.0246 z m -8.4251,3.2361 -12.799072,18.9318 -9.995787,-5.7706 22.794859,-13.1612 z m 16.851427,0 22.793632,13.1599 -9.994495,5.7706 -12.799137,-18.9305 z m -42.230078,17.6348 9.997014,5.7707 -9.997014,20.55174 0,-26.32244 z m 67.607502,0 0,26.32374 -9.997079,-20.55304 9.995787,-5.7707 z m -49.759442,7.32 31.911382,0 -15.955691,27.63694 -15.955691,-27.63694 z m -4.280633,2.9219 15.567089,26.96074 -27.722796,-1.9681 12.155707,-24.99264 z m 40.472648,0 12.156935,24.99264 -27.722732,1.9681 15.565797,-26.96074 z m -45.617559,30.67114 22.797443,1.6199 0,11.5426 -22.797443,-13.1625 z m 50.763697,0 -22.79867,13.1625 0,-11.5426 22.79867,-1.6199 z"></path></g></svg>
+            </div>
+            <div class="button2 button">
+                {{ button2 }}
+            </div>
+            <div class="button3 button">
+                {{ button3 }}
+            </div>
+            <div class="button4 button">
+                {{ button4 }}
+            </div>
+            <div class="button5 button">
+                {{ button5 }}
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var button1 = new Vue({
+            el: '.button1',
+            data: {
+                button1: 'button1'
+            }
+        })
+        var button2 = new Vue({
+            el: '.button2',
+            data: {
+                button2: 'button2'
+            }
+        })
+        var button3 = new Vue({
+            el: '.button3',
+            data: {
+                button3: 'button3'
+            }
+        })
+        var button4 = new Vue({
+            el: '.button4',
+            data: {
+                button4: 'button4'
+            }
+        })
+        var button5 = new Vue({
+            el: '.button5',
+            data: {
+                button5: 'button5'
+            }
+        })
+    </script>
+</body>
+
+</html>
